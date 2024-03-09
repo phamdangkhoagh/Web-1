@@ -1,0 +1,743 @@
+*{
+    box-sizing: border-box;
+}
+img.cangiua {display: block; margin-left: auto; margin-right: auto;}
+#header{
+    margin:3px 0px;
+    width: 100%;
+    height:300px;
+    border: solid 2px;
+    background-image: url("../img/logo2.jpg");
+    background-repeat:no-repeat;
+    background-position: center center;
+    background-size:contain;
+    background-color:white;
+}
+#user,.cart{
+    float:right;
+    margin:3px 3px;
+    border: none;
+    transition: all 0.5s ease-in-out;
+}
+#user:hover{
+    background-color:darkgray;
+    border-radius: 20px; 
+}
+.cart:hover{
+    background-color:darkgray;
+    border-radius: 20px;  
+}
+/* Giỏ hàng của Trúc */
+#DienTen{          /* KHUNG ĐIỀN HỌ TÊN, SỐ ĐIỆN THOẠI, ĐỊA CHỈ */
+    background-color: #f1f1f1;
+    width: 100%;
+    height: 30px;
+    margin:5px 0;
+    padding: 5px;
+    border: none;
+    border-bottom: solid 2px;
+    outline: none;
+    font-size:18px;
+}
+#DienSDT{          /* KHUNG ĐIỀN HỌ TÊN, SỐ ĐIỆN THOẠI, ĐỊA CHỈ */
+    background-color: #f1f1f1;
+    width: 100%;
+    height: 30px;
+    margin:5px 0;
+    padding: 5px;
+    border: none;
+    border-bottom: solid 2px;
+    outline: none;
+    font-size:18px;
+}
+#DienDC{          /* KHUNG ĐIỀN HỌ TÊN, SỐ ĐIỆN THOẠI, ĐỊA CHỈ */
+    background-color: #f1f1f1;
+    width: 100%;
+    height: 30px;
+    margin:5px 0;
+    padding: 5px;
+    border: none;
+    border-bottom: solid 2px;
+    outline: none;
+    font-size:18px;
+}
+.ship{          /* PHƯƠNG THỨC THANH TOÁN */ 
+    width:17px;
+    height: 17px;
+    padding: 2px;
+}
+.thongtingiaohang{      /* CHỮ THÔNG TIN GIAO HÀNG */
+    display: flex;
+    justify-content: center;
+    margin:2px; 
+    padding:2px; 
+    height: auto
+}
+.pay{
+    width:17px;
+    height: 17px;
+    padding: 2px;
+}
+.khungtkthanhtoan{      /* KHUNG ĐIỀN SỐ TÀI KHOẢN TRONG PHƯƠNG THỨC TRẢ TIỀN BẰNG VÍ ĐIỆN TỬ */
+    background-color: #f1f1f1;
+    border: none;
+    outline: none;
+    border-bottom: solid;
+    margin: 10px; 
+    padding:2px;
+    width: 40%;
+    font-size: 20px;
+    width: 80%;
+}
+.nutchonthanhtoan{      /* NÚT CHỌN THANH TOÁN QUA VÍ ĐIỆN TỬ NÀO (GOOGLE PAY HAY PAYPAL HAY VISA HAY MASTER CARD) */
+    width: 30px; 
+    height: auto; 
+    float: left; 
+    margin-left: 20px; 
+    margin-top: 12px
+}
+.nutchonptthanhtoan{        /* NÚT CHỌN PHƯƠNG THỨC THANH TOÁN NÀO (COD HAY WALLET) */
+    width: 30px; 
+    height: auto; 
+    float: left;
+}
+.payimg{        /* KHUNG CỦA MỖI VÍ ĐIỆN TỬ */
+    margin: 5px;
+    width: 100%;
+}
+.payimg img{
+    width: 50px; 
+    height: 50px; 
+}
+#nutgp{         /* NÚT HIỂN THỊ KHUNG ĐIỀN SỐ TÀI KHOẢN */
+
+}
+#nutpp, #nutvs, #nutmc{     /* NÚT HIỂN THỊ KHUNG ĐIỀN SỐ TÀI KHOẢN */
+    display: none;
+}
+#ptpay{         /* KHUNG HIỂN THỊ 4 VÍ ĐIỆN TỬ */
+    display: none;
+}
+#kiemtragp{
+
+}
+#kiemtrapp, #kiemtravs, #kiemtramc{     /* HIỂN THỊ KHUNG THÔNG BÁO ĐIỀN THÔNG TIN SỐ TÀI KHOẢN */
+    display: none;
+}
+#tamtinh, #phiship, #voucher{       /* PHẦN THANH TOÁN */
+    width: 105px;
+    height: 32px;
+    border: none;
+    font-size: 18px;
+    font-family: Verdana;
+    text-align: right;
+    margin:2px 4px 0;
+    float: right;
+}
+/* .khungtien{
+    
+} */
+#total{
+    width: 200px;
+    height: 32px;
+    font-family: Verdana;
+    font-size: 25px;
+    text-align: right;
+    margin-right: 5px;
+    float: right;
+}
+#btn1{
+    background-color: white;
+    width: 45%; 
+    height: 45px; 
+    margin:10px 0 0 0; 
+    float: right;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 20px;
+    color: black;
+}
+#btn1:hover{
+    transition: all 0.2s ease-in-out;
+    background-color: black;
+    color:white;
+}
+
+/* Khung login -*/
+#modal-background{
+  display:none; 
+  position: fixed; 
+  z-index: 5; 
+  left: 0;
+  top:0;
+  width: 100%; 
+  height: 100%;
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 10px;
+}
+
+#khung{
+    height:560px; 
+    width:410px; 
+    margin-top:25px;
+    perspective: 600px;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    margin:auto;
+    transition: transform 1s; /* xoay mất 1s */
+    transform-style: preserve-3d; /* to tranform with 3d effect */
+    border:solid 3px white;
+    border-radius: 10px  ;
+    background-color:white;
+}
+
+#khunglogin{
+    height:550px; 
+    width:400px; 
+    float:left;
+    border:solid white;
+    background-color: #fefefe;
+    display:block;
+    position:fixed;
+    z-index :10;
+    margin-top:2px;
+    margin-left:2px;
+   
+}
+
+.nhap{                                          /*xài cho login và register*/
+    width: 100%;
+    height:85px;
+    margin-top: 15px;
+    border-left:solid white;
+    transition: all 0.2s ease-in-out;
+}
+.nhap:focus-within{
+    border-left:solid black;
+}
+#UserName{
+    border: none;
+    border-bottom: solid;
+    padding: 20px;
+    outline: none;
+    height:50%;
+    width:95%;
+    margin-left: 10px;
+    font-size: 20px;
+}
+#ipnPass
+{
+    border: none;
+    border-bottom: solid;
+    padding: 20px;
+    outline: none;
+    height:50%;
+    width:83%;
+    margin-left: 10px;
+    font-size: 20px;
+    float:left;
+}
+#btnPass      /*  nut con mat */
+{
+    margin-top: 6px;
+    cursor: pointer;
+    background-color: white;
+    border:none;
+    border-bottom:solid;
+}
+
+.orlogin{
+    border: solid black;
+    border-radius: 10px;
+    width: 45%;
+    margin-top: 2%;
+    margin-left: 3.5%;
+    height: auto;
+    float: left;
+}
+.orlogin:hover{
+    background-color: whitesmoke;
+}
+.orlogin img{
+    border: none;
+    outline: none;
+    width: 25px;
+    height: 25px;
+    position: relative;
+    left:42%;
+    top:2px;
+}
+#login{
+    border:none;
+    position: relative;
+    left:40%;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+}
+#loGin img     /*mui ten login*/
+{             
+    margin: auto;
+    width: 50px;
+    height: 50px;
+}
+#loGin 
+{
+    height:100%;
+    width: 100%;
+    border-radius :20px;
+    background-color: white;
+    cursor: pointer;
+}
+#loGin:hover{
+    background-color:whitesmoke;
+}
+/* - Khung login */
+/* - Khung register*/
+
+#khungregister{
+    height: 550px;
+    width: 400px;
+    background-color: white;
+    overflow-y: scroll;
+    position:fixed;
+    z-index :10;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    margin-top:2px;
+    margin-left:2px;
+}
+.nhapradio{
+    width: 100%;
+    height: 30px;
+    margin-top: 10px;
+}
+#name, #username, #Phone, #Email, #Dayofbirth, #Password, #Password-again{
+    float: left;
+    border: none;
+    outline: none;
+    padding: 20px;
+    border-bottom: solid;
+    margin-left: 10px;
+    width: 95%;
+    height:40px;
+    font-size: 20px;
+
+}
+#gioitinh{
+    float: left;
+    outline: none;
+    margin-left: 10px;
+    width: 95%;
+    height:40px;
+    font-size: 20px;
+}
+#btn{
+    border: solid black;
+    position: relative;
+    left:40%;
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    background-color: white;
+    cursor: pointer;
+    margin-top:20px;
+}
+#btn:hover{
+    background-color: lightgray;
+}
+#node1, #node2{
+    height: 18px;
+    width: 18px;
+}
+#topmenu{
+    margin:3px 0px;
+    float:left;
+    background-color:black;
+    height :50px;
+    border: none;
+    width: 100%;
+    position: relative;
+    z-index: 4;
+}
+ul, li{
+margin:3px,3px;
+padding:3px 3px;
+}
+#mothermenu{
+    list-style:cjk-ideographic;
+    margin:0px 0px;
+    background-color:black;
+    border: none;
+    height:auto;
+    padding: 12px;
+    border:solid black;
+}
+
+.home,.news,.products,.support{
+    list-style-position:inside;
+    display:inline;
+    margin: 0px 0px;
+    padding:10px 10px;
+    font-size:15px;
+    height:auto;
+    border:solid black;
+    font-size:large;
+}
+#Admin{
+    list-style-position:inside;
+    margin: 0px 0px;
+    padding:10px 10px;
+    font-size:15px;
+    height:auto;
+    border:solid black;
+    font-size:large;
+    display: none;
+}
+#topmenu li a{
+    color :white;
+    border:solid black;
+    transition: all ease-in-out 0.15s ;
+    border: none;
+}
+
+.sub-menu{
+    list-style:cjk-ideographic;
+    position: absolute;
+    height :60px;
+    padding: 15px 15px;
+    border: outset whitesmoke;
+    background-color: black;
+    width: auto;
+    border-radius: 20px;
+}
+
+.sub-menu li{
+    padding:0px 10px;
+    display:inline;
+    width: 100%; 
+    border-radius: 20px;
+}
+
+#topmenu .sub-menu{
+    display:none;
+}
+
+#topmenu .products:hover .sub-menu{
+    display:block;
+    margin-top:10px;
+    margin-left:30px;
+}
+
+.sub-menu li a{
+    text-decoration: none;
+}
+
+#topmenu li a:hover{
+    color: yellow;
+    border-bottom:solid yellow;
+    padding:0px;
+}
+
+#search-box{
+    background: white;
+    float:right;
+    padding-top:0px;
+    margin-right:-2px;
+    border:solid 2px ;
+    border-radius: 5px;
+}
+#search-box #search-text{
+    border:none;
+    outline: none;
+    background: none;
+    font-size:17px;
+    width: 0;
+    padding: 0;
+
+    transition: all 0.5s ease-in-out;
+}
+
+#search-box:hover #search-text, #search-box #search-text:valid{
+    width: 300px;
+    padding: 10px 0px 10px 15px;
+}
+
+#search-box #search-btn{
+    background-color: white;
+    cursor: pointer;
+    border:none;
+    padding: 13px;
+    font-size:17px;
+    border-radius: 20px;
+}
+
+#slider{
+    overflow:hidden;
+    height:600px;
+    border: solid;
+    margin: 3px 0px;
+    width:100%;
+    float:left;
+    position: relative;
+    z-index: 2;
+}
+
+.slide-wrapper {
+    width: 400%;
+    position: relative;
+    z-index:2;
+}
+
+.slide{
+    float:left;
+    width:25%;
+    height:600px;
+}
+
+.prev,.next{
+    cursor:pointer;
+    position:absolute;
+    top:30%;
+    width:auto;
+    margin-top:20px;
+    padding:16px;
+    color:darkgrey;
+    font-weight: bold;
+    font-size: 50px;
+    transition:0.6s ease;
+    border-radius :0 3px 3px 0;
+    user-select: none;
+    z-index: 5;
+}
+
+.next{
+    top:center;
+    right:0px;
+}
+
+.prev{
+    top:center;
+    left:0px;
+}
+
+.prev:hover,.next:hover{
+    background-color:rgba(0,0,0,0.8);
+}
+
+#dot-wrapper{
+    height:10%;
+    bottom:0px;
+    position:absolute;
+    right:0px;
+    left:0px;
+    margin:0px auto;
+    z-index:5;
+}
+
+.dot{
+    cursor:pointer;
+    height:15px;
+    width:15px; 
+    background-color:darkgrey;
+    border-radius:50%;
+    display:inline-block;
+    transition: background-color 0.6s ease;
+    margin:0 2px;
+}
+
+.active,.dot:hover{
+    background-color:#717171;
+}
+
+@keyframes slide {
+    20% {margin-left: 0%;}
+    30% {margin-left: -100%;}
+    50% {margin-left: -100%;}
+    60% {margin-left: -200%;}
+    80% {margin-left: -200%;}
+}
+
+.slide img{
+    height:100%;
+    width:100%;
+}
+
+.newproduct {
+    height: max-content;
+    width: max-content;
+    display: grid;
+    grid-template-columns: 250px 250px 250px 250px 250px;
+    column-gap: 50px;
+    padding: 40px;
+}
+
+.sales {
+    height: max-content;
+    width: max-content;
+    display: grid;
+    grid-template-columns: 250px 250px 250px 250px 250px;
+    column-gap: 50px;
+    padding: 40px;
+}
+
+.tieude{
+    width: 100%;
+    height: 50px;
+    float:left;
+}
+.tuade{
+    text-indent: 10px;
+    float:left;
+    width:70%;
+    font-weight: bold;
+    font-size:x-large;
+}
+
+.seemore{
+    float:right;
+    height :30px;
+    width: 29%;
+}
+
+.seemore a{
+    text-decoration: none;    
+    float:right; 
+    padding:5px 10px;
+    color: #333;
+    transition-duration: 0.5s;
+}
+
+.seemore a:hover{
+    color: rgb(255, 255, 255);
+    background-color: black;
+    transition-duration: 0.5s;
+}
+
+
+body {
+font-family: sans-serif;
+color: #333;
+}
+#Footer li{
+    display: inline;
+    margin-right: 50px;
+}
+#Footer{
+    height:250px; 
+    width:100%; 
+    background-color:black;
+    overflow: hidden;
+}
+#left{
+    width:350px;
+    margin-left:15px;
+    margin-top: 15px;
+    float:left;
+    position: absolute;
+}
+#right{
+    width:650px;
+    float:right;
+    text-align: center;
+    line-height: 30px;
+}
+.pp img{
+    width: 100px;
+    height: 100px;
+    margin-left: 50px;
+}
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+  }
+    
+  @keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  }
+@media only screen and (max-width:1000px) {
+    #Footer li{
+        display:block;
+    }
+    #Footer{
+        height:auto;
+    }
+    #left{
+        width:40%;
+    }
+    #right{
+        width:60%;
+    }
+    .pp img{
+        width:80px;
+        height:80px;
+        margin-left:20px;
+    }
+    #slider{
+        height:400px;
+    }
+    .slide img{
+    height:400px;
+    width:100%;
+    }
+    .sub-menu li{
+        padding: 10px 10px;
+        display:block;
+        width: 150px;
+        height: auto;       
+        text-align: center; 
+    }
+    .sub-menu{
+        margin:0px 0px;
+        height:100%;
+        width:auto;
+    }
+    #mothermenu{
+        float:left;
+        margin:0px 0px;
+        height:100%;
+        padding: 0px 0px;
+        border:solid black;
+        margin-top: 10px;
+        margin-left:10px;
+
+    }
+
+    #topmenu .products:hover .sub-menu{
+        margin-left:85px;
+        padding :0px 0px;
+        height:auto;
+        padding-bottom: 0px;
+        margin-top:0px;
+    }
+    .home,.news,.products,.support{
+        list-style-position:inside;
+        display:inline;
+        margin: 0px 0px;
+        padding:10px 0px;
+        font-size:15px;
+        height:100%;
+    }
+    #Admin{
+        list-style-position:inside;
+        display:inline;
+        margin: 0px 0px;
+        padding:10px 0px;
+        font-size:15px;
+        height:100%;
+        display: none;
+    }
+    #search-box:hover #search-text, #search-box #search-text:valid{
+        width: 100px;
+        padding: 10px 0px 10px 15px;
+    }
+}

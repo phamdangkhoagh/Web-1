@@ -1,0 +1,586 @@
+/* reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header-admin {
+    width: 100%;
+    height: 150px;
+}
+
+#logo > .logoweb {
+    height: 50px;
+    width: 50px;
+    position: relative;
+    left: 50%;
+
+}
+
+#logo > p {
+    font-size: 30px;
+    height: 50px;
+    text-align: center;
+}
+
+/* icon  */
+/* #login-main > a > .user {
+    float:right;
+    margin:3px 3px;
+    height: 40px;
+    width: 40px;
+    position: relative;
+    bottom: 100px;
+}
+
+#invoice-main > a > .cart  {
+    float:right;
+    margin:3px 3px;
+    height: 40px;
+    width: 40px;
+    position: relative;
+    bottom: 100px;
+}
+
+#login-main > a > .user:hover {
+    background-color: rgb(205, 205, 205);
+}
+
+#invoice-main > a > .cart:hover  {
+    background-color: rgb(205, 205, 205);
+} */
+.img-admin{
+    width: 100px;
+    height: 100px;
+}
+/* img {
+    width: 100px;
+    height: 100px;
+} */
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* nav */
+#nav {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+.item-nav {
+    height: 50px;
+    padding: 10px;
+}
+
+.item-nav:hover {
+    height: 50px;
+    background-color: #757575;
+}
+
+.item-nav>a {
+    color: #fff;
+}
+
+
+/* Container  */
+#container {
+    min-height: 800px;
+}
+
+#content {
+    width: 90%;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+#left-menu {
+    margin-top: 55px;
+}
+td,
+th {
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    height: 50px;
+
+}
+
+table {
+    border-collapse: collapse;
+    width: 90%;
+    margin-left: 50px;
+    margin-top: 50px;
+    
+}
+
+tr {
+    border-bottom: 1px solid black;
+}
+
+th {
+    height: 40px;
+    background-color: #bcb1b1;
+
+}
+
+tbody {
+    border: 1px solid black;
+}
+
+/* td, th {
+        border-bottom: 1px solid black;
+    }
+
+    tr {
+        border-bottom: 1px solid black;
+    } */
+
+
+/* form them sp */
+.themsp {
+    margin-top: 15px;
+    
+}
+
+.item-themsp {
+    height: 40px;
+}
+
+.item-themsp > p {
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin-left: 40px;
+}
+
+.item-themsp > input[type="number"] {
+    float: right;
+    width: 250px;
+    height: 30px;
+    margin-right: 40px;
+    border-radius: 10px;
+}
+
+.item-themsp > input[type="text"] {
+    float: right;
+    width: 250px;
+    height: 30px;
+    margin-right: 40px;
+    border-radius: 10px;
+}
+
+.item-themsp > input[type="file"] {
+    float: right;
+    margin-right: 40px;
+}
+
+.themsp-btn > input[type="button"] {
+    width: 50px;
+    height: 30px;
+    border-radius: 1px solid ;
+
+}
+
+.error-message {
+    color: red;
+    width: 100%;
+    height: 20px;
+}
+.form-themsp{
+    position: relative;
+    left: 540px;
+    top: 100px;
+    background: white;
+    width: 400px;
+    height: 550px;
+    border-radius: 5px;
+}
+#t-themsp {
+    /* display: none; */
+    /* position: fixed;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05); */
+    position: fixed;
+    background: rgba(0, 0, 0, 0.4);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    
+}
+/* .themsp-container {
+    background: white;
+    width: 400px;
+    height: 500px;
+    border-radius: 5px;
+} */
+#t-themsp > h2 {
+    width: 100%;
+    height: 50px;
+    margin-top: 5px;
+}
+
+#t-themsp > i {
+    width: 10px;
+    height: 10px;
+}
+
+.border-img {
+    width: 120px;
+    height: 130px;
+    border: 1px solid black;
+    margin-left: 106px;
+}
+
+.themsp-btn {
+    left: 40px;
+}
+
+.menu-action { 
+    float: right;
+}
+    
+.menu-action > input[type="button"] {
+    height: 30px;
+    margin-right: 86px;
+    background: #fff;
+    color: #000;
+    padding: 5px;
+    border-radius: 5px;
+}
+.menu-action > input[type="button"]:hover{
+    background-color: #000;
+    color: #fff;
+}
+.action{
+    /* display: flex;
+    flex-direction: column; */
+    display: inline-block;
+    background: #fff;
+    color: #000;
+    padding: 2px;
+    margin-top: 5px;
+    margin-left: 12px;
+    margin-right: -12px;
+    border-radius: 5px;
+}
+
+.action:hover {
+    background-color: #000;
+    color: #fff;
+}
+/* form login admin */
+.login-admin {
+    /* display: none; */
+    position: fixed;
+    background: rgba(0, 0, 0, 0.4);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    z-index: 1;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05); */
+}
+
+.login-ad-container {
+    background: white;
+    width: 400px;
+    height: 300px;
+    border-radius: 5px;
+}
+
+.login-ad-header {
+    background: black;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.login-label {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.login-ad-input {
+    border: 1px solid #000;
+    width: 90%;
+    height: 30px;
+    padding: 5px;
+    font-size: 15px;
+    margin-bottom: 15px;
+    margin-left: 17px;
+    border-radius: 5px;
+}
+
+.login-ad-body {
+    margin-left: 5px;
+}
+
+.btn-login {
+    background: #000;
+    color: #fff;
+    font-size: 10px;
+    height: 30px;
+    width: 30%;
+    margin-left: 16px;
+    border-radius: 5px;
+}
+/* form user */
+#form-user {
+    display: none;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.4);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+}
+.qly-user {
+    position: relative;
+    left: 540px;
+    top: 100px;
+    background: white;
+    width: 400px;
+    height: 500px;
+    border-radius: 5px;
+}
+.form-user-header{
+    background: black;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.item-user {
+    height: 40px;
+}
+
+.item-user > p {
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin-left: 40px;
+}
+
+.item-user > input[type="number"] {
+    float: right;
+    width: 250px;
+    height: 30px;
+    margin-right: 40px;
+    border-radius: 10px;
+}
+
+.item-user > input[type="text"] {
+    float: right;
+    width: 250px;
+    height: 30px;
+    margin-right: 40px;
+    border-radius: 10px;
+}
+.item-user > input[type="password"] {
+    float: right;
+    width: 250px;
+    height: 30px;
+    margin-right: 40px;
+    border-radius: 10px;
+}
+
+.qlur-btn > input[type="button"]{
+    width: 50px;
+    height: 30px;
+    margin-left: 40px;
+}
+
+/* form đơn hàng */
+#form-invoice {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.4);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+}
+.qly-invoice {
+    position: relative;
+    left: 210px;
+    top: 20px;
+    background: white;
+    width: 70%;
+    height: 700px;
+    border-radius: 5px;
+    overflow: auto;
+}
+.form-invoice-header{
+    background: black;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+#form-detail{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+}
+.item-invoice {
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+}
+
+.item-invoice > p {
+    /* float: left; */
+    width: 80px;
+    height: 50px;
+    margin-left: 105px; 
+}
+
+.item-invoice > input[type="text"] {
+    /* float: right; */
+    width: 250px;
+    height: 30px;
+    margin-right: 40px;
+    border-radius: 10px;
+}
+
+.item-invoice > input[type="date"] {
+    /* float: right; */
+    width: 250px;
+    height: 30px;
+    margin-right: 40px;
+    border-radius: 10px;
+}
+
+.item-invoice > select {
+    /* float: right; */
+    width: 250px;
+    height: 30px;
+    margin-right: 40px;
+    border-radius: 10px;
+}
+
+.qlinvoice-btn > input[type="button"]{
+    width: 100px;
+    height: 30px;
+    margin-left: 245px;
+    position: relative;
+    top:15px;
+
+}
+
+/* menu đơn hàng */
+.menu-dh {
+    width: 100%;
+    height: 50px;
+    margin-top: 4px;
+    background-color: #cecdcde1;
+}
+
+/* menu thống kê */
+.menu-tk {
+    width: 100%;
+    height: 50px;
+    margin-top: 4px;
+    background-color: #cecdcde1;
+}
+
+/*  Scrollbar đây là phần chính , điều chỉnh độ rộng của scrollbar */
+body::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* scrollbar track là phần hiển thị bên trong  */
+body::-webkit-scrollbar-track {
+    background-color: #fff;
+}
+
+/* Scrollbar thumb là phần chúng ta thường nhấn chuột vào để kéo */
+body::-webkit-scrollbar-thumb{
+    background-color: #000; 
+    border-radius: 20px;
+}
+
+/* footer */
+/* #footer {
+    width: 100%;
+    height: 150px;
+    margin-top: 10px;
+    background-color: black;
+} */
+
+/* Footer  */
+#footer{
+    height:200px; 
+    width:100%; 
+    margin-top: 10px;
+    background-color:black;
+    overflow: hidden;
+}
+
+#footer li{
+    display: inline;
+    margin-right: 50px;
+}
+.logo-footer {
+    width: 50px;
+    height: 50px;
+}
+#right-footer{
+    width:650px;
+    float:right;
+    text-align: center;
+    line-height: 30px;
+}
+
+#left-footer{
+    width:350px;
+    margin-left:15px;
+    margin-top: 15px;
+    float:left;
+    position: absolute;
+}

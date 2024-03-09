@@ -1,0 +1,436 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#midder {
+    width: 100%;
+    height: 1120px;
+    display: none;
+    grid-template-columns: 180px auto;
+    grid-template-rows: 1070px 50px;
+}
+
+/* - Giỏ hàng của Duệ -*/
+#Cart {
+    height: max-content;
+    overflow: scroll;
+}
+
+button.CartButton {
+    margin: 30px; 
+    padding: 16px 25px; 
+    background-color: black; 
+    color: white; 
+    border: none;
+    transition-duration: 0,5s;
+}
+
+button.CartButton:hover {
+    background-color: rgb(102, 102, 102); 
+    color: white; 
+    transition-duration: 0,5s;
+    
+}
+
+.head th {
+    padding: 16px 20px;
+    border: 2px solid #000000;
+    background-color: #515151;
+    color: rgb(255, 255, 255);
+}
+
+.body th{
+    padding: 16px 20px;
+    border: 2px solid #000000;
+    background-color: #dfdfdf;
+    color: rgb(0, 0, 0);
+}
+
+#Shop_Logo {
+    width: 100%;
+    height: 400px;
+    object-fit: none;
+    object-position: center top;
+}
+
+
+#linkbar{ 
+    text-align: left;
+    font-size: 20px;
+    padding: 10px 30px;
+}
+
+
+#linkbar .linkbartext {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+a.CategoryTitle{
+    width: 100%;
+    font-size: 20px;
+    color: black;
+    text-align: left;
+    padding: 16px 20px;
+    margin: 0;
+    display: inline-block;
+}
+
+
+
+label.Pricelab{
+    width: 100%;
+    padding: 16px 25px;
+    font-size: 16px;
+}
+
+/* menu bar */
+.menubar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(0, 0, 0);
+}
+
+.menubar {
+    width: 100%;
+    height: 45px;
+    background-color: black;
+    
+}
+
+.menubar li {
+    float: left;
+}
+
+.menubar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px 20px;
+    text-decoration: none;
+    transition-duration: 0.5s; 
+}
+
+.menubar li a:hover {
+    transition-duration: 0.5s;
+    background-color: rgb(255, 255, 255);
+    color:rgb(0, 0, 0);
+}
+
+.menubar input[type=text] {
+    float: right;
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    border: none;
+    font-size: 17px;
+    border-radius: 5px;
+    width: 200px ;
+}
+
+.menubar button {
+    float: right;
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: rgb(255, 255, 255);
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition-duration: 0.5s;
+  }
+  
+.menubar button:hover {
+    background: rgb(163, 163, 163);
+    transition-duration: 0.5s;
+  }
+/* Left bar */
+
+.left {
+    grid-row: 1 / 3;
+    width: 180px;
+    background-color: rgb(227, 227, 227);
+}
+
+.leftbar {
+    list-style-type: none;
+    width: 180px;
+    height: 1200;
+    float: left;
+    overflow: hidden;
+}
+
+.leftbar ul {
+    margin: 0; 
+    padding: 0;
+    width: 100%;
+    color: rgb(0, 0, 0);
+    background-color: rgb(227, 227, 227);
+}
+
+.leftbar li a {
+    width: 100%;
+    display: block;
+    color: rgb(0, 0, 0);
+    background-color: rgb(227, 227, 227);
+    padding: 16px 25px;
+    text-decoration: none;
+    transition-duration: 0.5s; 
+    
+}
+
+.leftbar li a:hover {
+    background-color: rgb(116, 116, 116);
+    color: rgb(0, 0, 0);
+    transition-duration: 0.5s;
+    
+} 
+
+.button.PriceSearch {
+    width:150px;
+    background-color: #000000; 
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 5px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition-duration: 0.5s; 
+}
+
+.button.PriceSearch:hover {
+    background-color: rgb(69, 69, 69);
+    color: rgb(255, 255, 255);
+    transition-duration: 0.5s; 
+}
+
+/* product */
+
+#content {
+    height: max-content;
+    width: content ;
+    display: grid;
+    row-gap: 10px;
+    grid-template-columns: 250px 250px 250px 250px;
+    column-gap: 80px;
+    grid-template-rows: 325px 325px 325px;
+    padding: 40px;
+}
+
+
+.Products {
+    width: 250px;
+    height: 325px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    box-shadow: 1px 2px 4px #ddd;
+}
+
+.Products:hover{
+    background-color: rgb(202, 202, 202);
+    transition-duration: 0.5s; 
+}  
+
+.Product .Product-Title{
+    font-size: 16px;
+    color:rgb(88, 88, 88);
+}
+
+.Product .Product-Price{
+    font-size: 19px;
+    color:rgb(0, 0, 0);
+}
+
+.Products .button.Product-Cart{
+    width: 125px;
+    margin-top: 10px;
+    padding: 12px 20px;
+    color: white;
+    background-color: black;
+    display: block;
+    font-size: 14px;
+    border: none;
+    margin-left: auto;
+    transition-duration: 0.5s; 
+}
+
+.button.Product-Cart:hover {
+    background-color: #838383;
+    transition-duration: 0.5s; 
+}
+/* phân trang */
+.PaginationBar{
+    grid-area: 2 / 2;
+    text-align: center;
+}
+.pagination {
+    background-color: #ffffff;
+    margin: 10px;
+}
+
+.pagination li {
+    display: inline-block;
+    color: rgb(0, 0, 0);
+    padding: 8px 16px;
+    text-decoration: none;
+    transition-duration: 0.5s;
+}
+
+.pagination li.active {
+    background-color: #000000;
+    color :rgb(255, 255, 255)
+}
+
+.pagination li:hover:not(.active){
+    background-color: #838383;
+    color:rgb(255, 255, 255);
+    transition-duration: 0.5s;
+}
+  /* Top Up Button */
+
+#TopUpButton {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    outline: none;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+    transition-duration: 0.5s;
+  }
+  
+#TopUpButton:hover {
+    background-color: rgb(81, 81, 81);
+    transition-duration: 0.5s;
+}
+
+/* Thông tin sản phẩm */
+#ProductWindow {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2) ;
+    top: 0;
+    position: fixed; 
+    z-index:10;
+}
+
+.ProductDetail {
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 350px 450px ;
+    grid-template-rows: 75px 325px 100px;
+    border-radius: 5px;
+    position: fixed;
+    width: 800px;
+    height: 500px;
+    top: 20%;
+    left: 24%;
+    background-color: #ffffff;
+    border: 1px solid #5e5e5e ;
+}
+
+#Product_Image {
+    grid-area: 2 / 1 ;
+    
+}
+
+#ProductDetail_left{
+    grid-area: 2 / 2 ;
+}
+/* nút đống */
+button.CloseDetail {
+    grid-area: 1 / 2;
+    height: 30px;
+    width: 30px;
+    border: none;
+    margin-top: 10px;
+    margin-left: 410px;
+    font-size: 30px;
+    transition-duration: 0.5s;
+    background-color: white;
+}
+
+button.CloseDetail:hover {
+    color: white;
+    background-color: black;
+    transition-duration: 0.5s;
+} 
+ /* Nút thêm vào giỏ hàng */
+button.AddtoCart {
+    grid-area: 3 / 2 ;
+    height: 50px;
+    width: 220px;
+    margin-top: 30px;
+    margin-left: 210px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    font-size: 20px;
+    transition-duration: 0.5s;
+}
+
+button.AddtoCart:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(95, 95, 95);
+    transition-duration: 0.5s;
+}
+
+
+label.Detail_Title {
+    grid-area: 1 / 1 ;
+    font-size: 24px;
+    margin: 10px;
+    color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.BuyNumber {
+    grid-area: 3 / 1 ;
+    display: grid;
+    grid-template-columns: 50px 70px 50px;
+    margin-left: 100px;
+}
+
+.ChangeNum {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 30px;
+    border-radius: 3px;
+    transition-duration: 0.5s;
+}
+
+.ChangeNum:hover {
+    background-color: gray;
+    transition-duration: 0.5s;
+}
+
+
+input[type=number]{
+    width: 60px;
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+}
+
+#ProductDetail_left label.lab_Detail {
+    font-size: 16px;
+    color: #838383;
+}
+
