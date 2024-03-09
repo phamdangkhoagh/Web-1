@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Jewel Hearts</title>
+    <link rel="shortcut icon" href="./img/logo.jpg">
+    <link rel="stylesheet" href="./css/doan.css">
+    <link rel="stylesheet"  href="./css/GUI.CSS">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/doan.js"></script>
+    <script defer src="./js/page_product.JS"></script>
+    <script src="https://kit.fontawesome.com/ce0303e136.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="container" style = "width:100%;margin:0px auto;height: auto;background-color:#f1f1f1;display: block;">
+    <button onclick="topFunction()" id="TopUpButton" title="Go to top">Top</button>
+
+    <div id="header">
+        <div id="NameUser" style="width:30%;float:left;border:none;margin:30px;font-weight: bold;"></div>
+        <div id="user" onclick="LogInOut()"><img class="icon" src="./img/account.svg" height="40px" width="40px"></div>
+            <div class="cart"><a onclick = "OpenCart()"><img class="icon" src="./img/bag.svg" height="40px" width="40px" ></a></div>
+    </div>
+    
+    <div id="modal-background" > 
+    <form class="khung animate" action="" method="post" >
+        <div id="khung">
+    <div id="khunglogin">
+                    <div style="height:100px">
+                        <div class="close" onclick="closeLogin()" style="float:right; width:35px; height:30px;cursor: pointer;">
+                            <img src="./img/close.svg" height="35px" width="35px">
+                        </div>
+                        <div style="float:left; height:auto; margin-top:30px; margin-left: 65px">
+                            <font size="7px" face="Verdana">Đăng nhập</font>
+                        </div>
+                    </div>
+                    <div style="height:auto">
+                        <div class="nhap">
+                            <div style="height:auto; margin-left:20px; margin-top:5px; float:left">
+                                <img src="./img/account1.svg" width="30px" height="30px">
+                            </div>
+                            <input name="UserName" id="UserName" value="" type="text" placeholder="Email" />
+                            <div id="ErrorUN" style="height:20px"></div>
+                        </div>
+                        <div class="nhap" >
+                            <div style="height:auto; margin-left:20px; margin-top:5px; float:left;width: 100%;">
+                                <img src="./img/password.svg" width="30px" height="30px">
+                            </div>
+                            <input name="ipnPass" id="ipnPass" value="" type="password" placeholder="Mật khẩu" />
+                            
+                            <div id="eyes" style="float:left;clear:right;">
+                                <button name="btnPass" id="btnPass" type="button" onclick="hidePass(this)">        <!-- an hien mat khau --> 
+                                    <img src="./img/hide.svg" id="hideImage" width="30px" height="30px">
+                                </button> 
+                            </div>
+                        </div>
+                        <div id="ErrorP" style="height:20px;"></div>
+                        <div class="or">
+                            <center><font size="3px" face="Verdana">Hoặc</font></center>
+                        </div>
+                        <div style="height: 54px">
+                            <a href="https://www.facebook.com/truc.xuan.161/", style="text-decoration: none">
+                                <div class="orlogin">
+                                    <img src="./img/facebookkv.svg">
+                                </div>
+                            </a>
+                            <a href="#", style="text-decoration: none">
+                                <div class="orlogin">
+                                    <img src="./img/search-engine.svg">
+                                </div>
+                            </a>
+                        </div>
+                        <div style="height: auto">
+                            <a href="#", style="text-decoration: none">
+                                <div id="login">
+                                    <button name="loGin" id="loGin" type="button" onclick="checkLog()" >
+                                        <img src="./img/arrow-right.svg">
+                                    </button>
+                                </div>
+                            </a>
+                        </div>
+                        <div style="margin-top: 10px">
+                            <center><font size="3px" face="Verdana">
+                                <a href="#", style="text-decoration: none">Quên mật khẩu ?</a>
+                            </font></center>
+                        </div>
+                        <div style="margin-top: 10px">
+                            <center><font size="3px" face="Verdana">
+                                Chưa có tài khoản ? <a href="#" id="createTK" onclick="rotate()" style="text-decoration: none">Tạo tài khoản</a>
+                            </font></center>
+                        </div>
+                    </div>
+                
+                </div>
+                <div id="khungregister" class="section">
+                    <div style="height:100px">
+                        <div style="float:right; width:40px; height:30px; cursor: pointer" onclick="closeLogin()">
+                            <img src="./img/close.svg" height="35px" width="35px">
+                        </div>
+                        <div style="float:left; height:auto; margin-top:30px; margin-left: 100px">
+                            <font size="7px" face="Verdana">Đăng kí</font>
+                        </div>
+                    </div>
+                    <form id="khungdangky" action="">
+                    <div style="height:auto">
+                        <div class="nhap">
+                            <div style="float: left; margin-left:10px">             
+                                <font size="4px" face="Verdana">Họ và tên:</font>
+                            </div>
+                            <input type="text" id="name" onblur="checkName()"/>
+                            <div id="ErrorN" style="height:20px;float:left"></div>                    
+                            <!-- Ô nhập họ và tên -->
+                        </div>
+                        <div class="nhap">
+                            <div style="float: left; margin-left:10px">
+                                <font size="4px" face="Verdana">Ngày sinh: </font>
+                            </div>
+                            <input type="date" id="Dayofbirth" value="" min="" max="" onmouseover="maxDateBirth()"  onblur="checkDateBirth() "/>
+                           <div id="ErrorBD" style="height:20px;float:left"></div>                    
+                            <!-- Ô ngày sinh -->
+                        </div>
+                        <div class="nhapradio">
+                            <div style="float: left; margin-left:10px">
+                                <font size="4px" face="Verdana">Giới tính: </font>
+                            </div>
+                            <div style="float: left; margin-left: 10px">
+                                <input name="gioitinh" type="radio" id="node1" value="Nam" checked="checked"/>
+                            </div>
+                            <div style="float: left; margin-left: 5px">
+                                <font size="4px" face="Verdana">Nam</font>
+                            </div>
+                            <div style="float: left; margin-left: 15px">
+                                <input name="gioitinh" type="radio" id="node2" value="Nữ"/>
+                            </div>
+                            <div style="float: left; margin-left: 5px">
+                                <font size="4px" face="Verdana">Nữ</font>
+                            </div>
+                        </div>
+                        <div class="nhap">
+                            <div style="float: left; margin-left:10px">
+                                <font size="4px" face="Verdana">Số điện thoại:</font>
+                            </div>
+                            <input type="number" id="Phone" onblur="checkNumber()" onchange="checkNumber()"/>
+                            <div id="ErrorNumber" style="height:20px;float:left"></div>   
+                            <!-- ô sđt -->
+                        </div>
+                        <div class="nhap">
+                            <div style="float: left; margin-left:10px">
+                                <font size="4px" face="Verdana">Email:</font>
+                            </div>
+                            <input type="email" required id="Email"onblur="checkEmail()" onchange="checkEmail()"/>
+                            <div id="ErrorE" style="height:20px;float:left" ></div>   
+                            <!-- ô Email -->
+                        </div>
+                        <div class="nhap">
+                            <div style="float: left; margin-left:10px">
+                                <font size="4px" face="Verdana">Mật khẩu:</font>
+                            </div>
+                            <input type="text" value="" id="Password" onblur="checkPassRegister()" onchange="checkPassRegisterA()"/>
+                            <div id="ErrorPR" style="height:20px;float:left"></div>   
+                        </div>
+                        <div class="nhap">
+                            <div style="float: left; margin-left:10px">
+                                <font size="4px" face="Verdana">Nhập lại mật khẩu:</font>
+                            </div>
+                            <input type="text" id="Password-again" onblur="checkPassRegisterA()"/>
+                            <div id="ErrorPR-A" style="height:20px;float:left;"></div>  
+                        </div>
+                        <button id="btn" type="button" onclick="checkRegister(document.getElementById('name'),document.getElementById('Dayofbirth'),document.getElementsByName('gioitinh'),document.getElementById('Phone'),document.getElementById('Email'),document.getElementById('Password'))">
+                            <img src="./img/arrow-right.svg">
+                        </button>
+                        <div id ="ReportRegister" style="height:20px;margin-top:10px;text-align: center;color:green"></div>
+                        <div style="margin-top: 10px">
+                            <center><font size="3px" face="Verdana">
+                                Đã có tài khoản ? <a href="#" onclick="rotate1()" style="text-decoration: none">Đăng nhập</a>
+                            </font></center>
+                        </div>
+                    </div></form>
+                </div></div>
+            </form></div>
+    <div id="topmenu">
+        <div style="float:left;height: auto;width:68%">
+        <ul id="mothermenu">
+            <li class="home" onclick="showHome()"><a style=" text-decoration: none; ">HOME</a></li>
+            <li class="products" onclick="showProduct()"><a style=" text-decoration: none;">PRODUCTS</a>
+                <ul class="sub-menu">
+                    <li onclick="LeftBarAction(1)"><a>RING</a></li>
+                    <li onclick="LeftBarAction(4)"><a>NECKLACE</a></li>
+                    <li onclick="LeftBarAction(3)"><a>EARRING</a></li>
+                    <li onclick="LeftBarAction(2)"><a>BRACELET</a></li>
+                </ul>
+            </li>
+            <li class="support"><a onclick = "FooterFunction()" style="text-decoration: none; position: relative;">SUPPORT</a></li>
+            <li id="Admin"><a href="UI_Admin.html" onclick = "" style="text-decoration: none; position: relative; ">ADMIN</a></li>
+        </ul>
+        </div>
+        <div style="float:right;height:auto;width: auto;">
+            <form action="" id="search-box">
+                <input type="text" id="search-text" placeholder="Bạn muốn tìm gì ?" required>
+                <button id="search-btn" onclick = "OpenSearch()"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </div>
+    </div>
+    <div id="HOME" style="display:block">
+    <div id="slider">
+        <div class="slide-wrapper">
+            <div class="slide"><img src="./img/2149791.jpg"></div>
+            <div class="slide"><img src="./img/2960491.jpg"></div>
+            <div class="slide"><img src="./img/wp3308149.jpg"></div>
+            </div>
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+        <div id="dot-wrapper" style="text-align:center">
+        <span class="dot" onclick="chuyenSlide(1)"></span>
+        <span class="dot" onclick="chuyenSlide(2)"></span>
+        <span class="dot" onclick="chuyenSlide(3)"></span>
+        </div>
+    </div>
+    <div id="intro" style="margin:3px 0px;float:left;border:solid;width: 100%;">
+        <img src="./img/z3819843767701_b2e2ea09634c937db21a12ca5f9546db.jpg" width="100%">
+    </div>
+    
+    <div class="tieude"> 
+       <div class="tuade">NEW PRODUCTS </div>
+        <div class="seemore"><a href="#" onclick="showProduct()" >See more</a></div> 
+    </div>
+    <div class="newproduct">
+         
+    </div>
+    <div class="tieude"> 
+        <div class="tuade">SALES </div>
+         <div class="seemore"><a href="#" onclick = "SaleSeemore()" >See more</a></div> 
+     </div>
+    <div class="sales">
+      
+    </div>
+    </div>
+    <div id="Cart" style="display: none; height:auto;width: 100%;border:solid">
+        <label style = "font-size: 40px; margin-left: 10px"><b>Cart</b></label>
+        <div id= "CartItem">
+        </div>
+            <!--  THÔNG TIN GIAO HÀNG -->
+        <div style="height:370px">
+            <div style="border:solid 2px; width: 50%; height: auto; margin:10px 0 10px 0; padding: 10px; float: left">
+                <div class="thongtingiaohang">
+                    <center><img src="./images/delivery-truck (1).svg" width="35px" height="35px" style="float: left; margin-right: 10px"></center>
+                    <font size="5px" face="Verdana" color="black">Thông tin giao hàng</font>
+                </div>
+                <form action="#" method="get" name="khungdien">
+    
+                    <!--  HỌ TÊN  -->
+    
+                    <div style="margin:5px 5px 2px 5px">
+                        <font size="4px" face="Verdana" color="black">Họ và tên:</font>
+                        <input type="text" value="" id="DienTen" name="hoten" onblur="kthoten()" />
+                    </div>
+                    <div id="kiemtrahoten" style="height: auto; margin: 2px 0 2px 5px"></div>
+    
+                    <!--  SỐ ĐIỆN THOẠI  -->
+    
+                    <div style="margin:5px 5px 2px 5px">
+                        <font size="4px" face="Verdana" color="black">Số điện thoại:</font>
+                        <input type="text" value="" id="DienSDT" name="sdt" onblur="ktsdt()"/>
+                    </div>
+                    <div id="kiemtrasdt" style="height: auto; margin: 2px 0 2px 5px"></div>
+    
+                    <!--  ĐỊA CHỈ  -->
+    
+                    <div style="margin:5px 5px 2px 5px">
+                        <font size="4px" face="Verdana" color="black">Địa chỉ:</font>
+                        <input type="text" value="" id="DienDC" name="diachi" onblur="ktdiachi()"/>
+                    </div>
+                    <div id="kiemtradiachi" style="height: auto; margin: 2px 0 2px 5px"></div>
+                </form>
+    
+                <!--  PHƯƠNG THỨC THANH TOÁN  -->
+    
+                <form action="#" method="get" name="thanhtoan">
+                    <div style="margin:5px">
+                        <font size="4px" face="Verdana" color="black">Phương thức thanh toán:</font>
+                        <div style="margin:5px">
+                            <div class="nutchonptthanhtoan">
+                                <input type="radio" name ="chonthanhtoan" value="cod" class="ship" checked="checked" onclick="Changeship(this)">
+                            </div>
+                            <font size="4px" face="Verdana" color="black">Thanh toán khi nhận hàng</font>
+                        </div>
+                        <div style="margin:5px">
+                            <div class="nutchonptthanhtoan">
+                                <input type="radio" name ="chonthanhtoan" value="wallet" class="ship" onclick="Changeship(this)">
+                            </div>
+                            <font size="4px" face="Verdana" color="black">Thanh toán qua ví điện tử</font>
+                        </div>
+    
+                        <!--  PHƯƠNG THỨC TRẢ TIỀN BẰNG VÍ ĐIỆN TỬ  -->
+    
+                        <div id="ptpay">
+                            <div class="payimg">
+                                <div class="nutchonthanhtoan"><input type="radio" name ="thanhtoan" value="googlepay" checked="checked" class="pay" onclick="Changewallet(this)"/></div>
+                                <img src="images/google-pay (3).svg"> <!--  GOOGLE PAY  -->
+                                <div id='nutgp'><input type="text" name="gpay" value="" class="khungtkthanhtoan" placeholder="Nhập số tài khoản" onblur="ktgooglepay()"/></div>
+                                <div id="kiemtragp" style="height: auto; margin: 2px 0 2px 5px"></div>
+                            </div>
+                            <div class="payimg">
+                                <div class="nutchonthanhtoan"><input type="radio" name ="thanhtoan" value="paypal" class="pay" onclick="Changewallet(this)"/></div>
+                                <img src="images/paypal (2).svg"> <!--  PAYPAL  -->
+                                <div id="nutpp"><input type="text" name="pp" value="" class="khungtkthanhtoan" placeholder="Nhập số tài khoản" onblur="ktpaypal()" /></div>
+                                <div id="kiemtrapp" style="height: auto; margin: 2px 0 2px 5px"></div>
+                            </div>
+                            <div class="payimg">
+                                <div class="nutchonthanhtoan"><input type="radio" name ="thanhtoan" value="visa" class="pay" onclick="Changewallet(this)"></div>
+                                <img src="images/visaship2.svg"> <!--  VISA   -->
+                                <div id="nutvs"><input type="text" name="vs" value="" class="khungtkthanhtoan" placeholder="Nhập số tài khoản" onblur="ktvisa()" /></div>
+                                <div id="kiemtravs" style="height: auto; margin: 2px 0 2px 5px"></div>
+                            </div>
+                            <div class="payimg">
+                                <div class="nutchonthanhtoan"><input type="radio" name ="thanhtoan" value="mastercard" class="pay" onclick="Changewallet(this)"></div>
+                                <img src="images/mastercard (1).svg"> <!--  MASTER CARD  -->
+                                <div id="nutmc"><input type="text" name="mc" value="" class="khungtkthanhtoan" placeholder="Nhập số tài khoản" onblur="ktmastercard()" /></div>
+                                <div id="kiemtramc" style="height: auto; margin: 2px 0 2px 5px"></div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+    
+            <!--  PHẦN TÍNH TIỀN -->
+    
+            <form action="#" method="get" name="form2">
+            <div style="border:solid 2px; width: 45%; height: auto; margin:10px 0 10px 0; float: right">
+    
+                <!--  TẠM TÍNH  -->
+    
+                <div style="height:36px">
+                    <div style="margin: 5px 0 0 5px; float: left">
+                        <font size="3px" face="Verdana" color="black">Tạm Tính :</font>
+                    </div>
+                    <div id="tamtinh"></div>
+                </div>
+    
+                <!--  PHÍ SHIP -->
+    
+                <div style="height:36px">
+                    <div style="margin: 5px 0 0 5px; float: left">
+                        <font size="3px" face="Verdana" color="black">Phí Ship :</font>
+                    </div>
+                    <label id="phiship">25000</label>
+                </div>
+    
+                <!--  TỔNG TIỀN  -->
+                <div style="height:60px">
+                    <hr style="border: solid 1px">
+                    <div style="margin-left: 5px; float:left">
+                        <font size="5px" face="Verdana" color="black">Tổng Tiền :</font>
+                    </div>
+                    <div id="total"></div>
+                </div>
+            </div>
+            </form>
+    
+            <!--  NÚT ĐẶT HÀNG -->
+            
+            <button id="btn1" onclick="CheckBill()">
+                <font face="Verdana">Đặt hàng</font>
+            </button>
+        </div>
+    </div>
+
+    <div id="PRODUCTS" style="display:none">
+        <div id = linkbar> </div>
+        
+        <div id = midder>
+        <!-- left -->
+            <div class = "left">
+                <div class = "leftbar">
+                    <p><b><a class = "CategoryTitle">CATEGORY</a></b></p>
+                    <ui>
+                        <li><a onclick="LeftBarAction(0)">ALL</a></li>
+                        <li><a onclick="LeftBarAction(1)">RING</a></li>
+                        <li><a onclick="LeftBarAction(2)">BRACELET</a></li>
+                        <li><a onclick="LeftBarAction(3)">EARRING</a></li>
+                        <li><a onclick="LeftBarAction(4)">NECKLACE</a></li>
+                        <li><a onclick="LeftBarAction(8)">SALES</a></li>
+                    </ui>
+                    <p><b><a class = "CategoryTitl[e">PRICE</a></b></p>
+                    <ui>
+                        <li><a onclick="LeftBarAction(5)">Less than 1.000k </a></li>
+                        <li><a onclick="LeftBarAction(6)">1.000k - 2.000k</a></li>
+                        <li><a onclick="LeftBarAction(7)">More than 2.000k</a></li>
+                
+                    </ui> 
+                    <p><b><a class = "CategoryTitle">ENTER PRICE RANGE</a></b></p> 
+                    <label class = "Pricelab" for="PriceMin">Min</label>
+                    <input type="text" id="PriceMin" placeholder="--vnd--" style="width: 150px;padding: 16px 25px;margin: 10px 15px;display: inline-block;border: 1px solid #ccc;border-radius: 4px;box-sizing: border-box;"><br>
+                
+                    <label class = "Pricelab" for="PriceMax">Max</label>
+                    <input type="text" id="PriceMax" placeholder="--vnd--" style="width: 150px;padding: 16px 25px;margin: 10px 15px;display: inline-block;border: 1px solid #ccc;border-radius: 4px;box-sizing: border-box;"><br>
+
+                    <button class = "button PriceSearch" onclick = "Search(1)"> Search </button>
+                </div>
+            </div>
+    
+        <!-- content -->
+            <div id = "content"> </div>
+        <!-- thanh trang    -->     
+    
+        <div class ="PaginationBar">
+                <div class="pagination"></div>
+            </div>
+    </div>        
+        <!-- footer --> 
+        <!-- thông tin sản phẩm  -->
+        </div>
+    <div id="Footer">
+        <div id="left">
+            <font size="4px", face="Verdana"color="white">JEWEL HEARTS<br></font>
+            <font size="3px", face="Verdana"color="white">
+                <p>Địa chỉ: 273 An Dương Vương, Phường 3, Quận 5, TPHCM</p>
+                <p>Email: JewelHearts@gmail.com</p>
+                <p>Num: (+84)986197629</p>
+            </font>
+            <div><a href="https://www.facebook.com/truc.xuan.161/", style="text-decoration: none">
+                <img class="icon" src="./img/facebook-logo-2019.png", width="50", height="50">
+            </a>
+            <a href="https://www.facebook.com/truc.xuan.161/", style="text-decoration: none">
+                <img class="icon" src="./img/twitter.svg", width="60", height="50", style="margin-left:15px">
+            </a></div>
+        </div>
+            <div id="right">
+                <font size="4px", face="Verdana"color="white">
+                <ul>
+                    <li><a href="#", style="text-decoration: none; color:white">SUPPPORT</a></li>
+                    <li><a href="#", style="text-decoration: none; color:white">CONTACT US</a></li>
+                    <li><a href="#", style="text-decoration: none; color:white">ABOUT JEWEL HEARTS</a></li>
+                </ul>
+                </font>
+                <font size="4px", face="Verdana"color="white">PAYMENT METHODS<br></font>
+                <div class="pp", style="margin-right:30px; margin-top:20px"><a href="#", style="text-decoration: none">
+                    <img src="./img/google-pay.svg">
+                </a>
+                <a href="#", style="text-decoration: none">
+                    <img src="./img/visa.svg">
+                </a>
+                <a href="#", style="text-decoration: none">
+                    <img src="./img/paypal (1).svg">
+                </a>
+                <a href="#", style="text-decoration: none">
+                    <img src="./img/master-card.svg">
+                </a></div>
+            </div>
+    </div> 
+   
+    <div id = "ProductWindow">
+        <div class = "ProductDetail">
+            <!-- Hình ảnh sản phẩm -->
+            <label class = "Detail_Title"><b>DETAIL</b></label>
+            <div id = "Product_Image">
+            </div> 
+            
+            <button class = "CloseDetail" onclick="ExitDetail()"><i class="fa fa-close"></i></button>
+            
+            <div id = "ProductDetail_left">
+                <label class = "lab_Detail" ><b> NAME: </b></label><br>
+                    <label id = "lab_ProductName" style= "width: 350px; height: 22px; font-size: 24px; margin: 10px;"></label><br>
+                <label class = "lab_Detail" ><b> BRAND: </b></label><br>
+                    <label id = "lab_ProductBrand" style= "width: 350px; height: 22px; font-size: 24px; margin: 10px;"></label><br>
+                <label class = "lab_Detail" ><b> CATEGORY: </b></label><br>
+                    <label id = "lab_ProductCategory" style= "width: 350px; height: 22px; font-size: 24px; margin: 10px;"></label><br>
+                <label class = "lab_Detail" ><b> PRICE: </b></label><br>
+                    <label id = "lab_ProductPrice" style= "width: 350px; height: 22px; font-size: 24px; margin: 10px;"></label><br>
+                <label class = "lab_Detail" ><b> SALE: </b></label><br>
+                    <label id = "lab_ProductSale" style= "width: 350px; height: 22px; font-size: 24px; margin: 10px;"></label><br>
+                <label class = "lab_TotalPrice" style = "color: red; font-size: 20px;; "><b> TOTAL: </b></label><br>
+                    <label id = "lab_ProductTotalPrice" style= "color: red; width: 350px; height: 26px; font-size: 28px; margin: 10px;"></label><br>
+            </div>
+
+            <div class = "BuyNumber">
+                <button class = "ChangeNum decrease" onclick = "DecreaseNumber()">-</button>
+                <input type = "number" id = "Number"  value = "1" onchange = " ChangeNumber(value)" style = "width: 60px; height: 40px; font-size: 20px; text-align: center;" min = "1">
+                <button class = "ChangeNum increase" onclick = "IncreaseNumber()">+</button>
+            </div>
+            
+            <button class = "AddtoCart" onclick="AddCart()"><b>ADD TO CART</b></button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./img/logo.jpg">
+    <link rel="stylesheet" href="./font/themify-icons.css">
+    <script src="https://kit.fontawesome.com/ce0303e136.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div id="main">
+        <div class="header-admin">
+            <div id="logo">
+                <img class="logoweb" src="./img/logoweb.jpg" alt="logo">
+                <p>ADMIN</p>
+            </div>
+            <div id="nav">
+                <div class="item-nav"><a href="doan.html">Trang Chủ</a></div>
+                <div class="item-nav"><a href="UI_Admin.html?sp" id="qlsp">Quản lý Sản Phẩm</a></div>
+                <div class="item-nav"><a href="UI_Admin.html?dh" id="qldh">Quản lý Đơn Hàng</a></div>
+                <div class="item-nav"><a href="UI_Admin.html?usr" id="qlusr">Quản lý User</a></div>
+                <div class="item-nav"><a href="UI_Admin.html?tk" id="tk">Thống kê</a></div>
+            </div>
+        </div>
+        <div id="container">      
+                <h2>Danh sách sản phẩm</h2><br>
+                <div class="menu-action">
+                    <input type="button" name="btn-add" id="add" value="Thêm sản phẩm" onclick="mothemsp()" >
+                </div><br>
+                <br><hr>
+
+                <!-- Danh sách sản phẩm -->
+                <table id="table-sp" style="border: 1;" cellpadding="10" cellspace="0">
+                </table>
+               
+    </div>
+   
+    <div id="footer">
+        <div id="left-footer">
+            <font size="4px", face="Verdana"color="white">JEWEL HEARTS<br></font>
+            <font size="3px", face="Verdana"color="white">
+                <p>Địa chỉ: 273 An Dương Vương, Phường 3, Quận 5, TPHCM</p>
+                <p>Email: JewelHearts@gmail.com</p>
+                <p>Num: (+84)986197629</p>
+            </font>
+            <div>
+                <a href="https://www.facebook.com/truc.xuan.161/", style="text-decoration: none">
+                    <img class="logo-footer" src="./img/facebook-logo-2019.png", width="50", height="50">
+                </a>
+                <a href="https://www.facebook.com/truc.xuan.161/", style="text-decoration: none">
+                    <img class="logo-footer" src="./img/twitter.svg", width="60", height="50", style="margin-left:15px">
+                </a>
+            </div>
+        </div>
+            <div id="right-footer">
+                <font size="4px", face="Verdana"color="white">
+                <ul>
+                    <li><a href="#", style="text-decoration: none; color:white">SUPPPORT</a></li>
+                    <li><a href="#", style="text-decoration: none; color:white">CONTACT US</a></li>
+                    <li><a href="#", style="text-decoration: none; color:white">ABOUT JEWEL HEARTS</a></li>
+                </ul></font>
+                <font size="4px", face="Verdana"color="white">PAYMENT METHODS<br></font>
+                <div class="pp", style="margin-right:30px; margin-top:20px"><a href="#", style="text-decoration: none">
+                    <img src="./img/google-pay.svg">
+                </a>
+                <a href="#", style="text-decoration: none">
+                    <img src="./img/visa.svg">
+                </a>
+                <a href="#", style="text-decoration: none">
+                    <img src="./img/paypal (1).svg">
+                </a>
+                <a href="#", style="text-decoration: none">
+                    <img src="./img/master-card.svg">
+                </a></div>
+            </div>
+    </div> 
+    </div>
+    <script src="./js/product.js"></script>
+
+    
+</body>
+
+</html>
